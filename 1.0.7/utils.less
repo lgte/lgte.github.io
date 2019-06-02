@@ -1,0 +1,80 @@
+@import "config";
+.full {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.full-view {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.height-min-20-rem {
+}
+
+.centred-xy {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.responsive {
+  width: 100%;
+  display: block;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 1rem;
+  content: '';
+  background-color: pink;
+}
+
+.space {
+  height: 1rem;
+}
+
+.space-big {
+  height: 2rem;
+}
+
+.space-bigger {
+  height: 4rem;
+}
+
+.space-huge {
+  height: 8rem;
+}
+
+.pure {
+  text-decoration: none;
+}
+
+.hide {
+  .devicesMixin({
+    display: none;
+  });
+}

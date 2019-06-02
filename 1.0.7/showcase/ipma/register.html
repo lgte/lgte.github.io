@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          user-scalable=no,
+          minimal-ui"
+    />
+    <meta name="description" content="IPMA">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Rus Inozemtsev">
+    <meta name="author" content="Dasha Evstegneeva">
+
+    <title>IPMA</title>
+    <link href="/1.0.6/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fonts/hermes-fb.css">
+
+    <link rel="stylesheet" href="/1.0.6/components/hero/index.css">
+    <link rel="stylesheet" href="/1.0.6/components/domino/index.css">
+    <link rel="stylesheet" href="/1.0.6/components/tabs/index.css">
+</head>
+<body>
+<div id="app">
+    <!-- wrapper -->
+    <section class="background-dark hero-wrapper">
+        <div class="hero hero--one-third flex-column">
+            <div class="flex-item">
+                <div>
+                    <div class="container-fixed ipma-caption dim padding-10">
+                        International Project Management Association, IPMA
+                    </div>
+                </div>
+                <hr class="margin-0">
+                <div class="container-fixed padding-10">
+                    <ipma-navbar/>
+                </div>
+            </div>
+            <div class="flex-item-auto"></div>
+            <div class="container-fixed flex-item padding-10-bigger">
+                <h1 class="ipma-h1">Register</h1>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fixed padding-10-bigger">
+            <form>
+                <label>Option of participation</label>
+                <input type="text">
+
+                <label>Full name </label>
+                <input type="text">
+
+                <label>Phone</label>
+                <input type="text">
+
+                <label>Email</label>
+                <input type="text">
+
+                <label>Country and city</label>
+                <input type="text">
+
+                <label>Your company website</label>
+                <input type="text">
+
+                <label>Profile in Facebook</label>
+                <input type="text">
+
+                <br>
+
+                <label>
+                    <input type="checkbox">
+                    I want to make my profile visible to other participants
+
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    I agree with Terms of use and Privacy Policy
+
+                </label>
+            </form>
+        </div>
+    </section>
+    <ipma-footer/>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script type="module">
+	//AIzaSyDiOj_sxrXTGToS07qpRWMZT6ndY5iwvzA
+	import { Footer } from './components/Footer.js'
+	import { Navbar } from './components/Navbar.js'
+	import { Tabs } from '/1.0.6/components/tabs/index.js'
+
+	const app = new Vue({
+		el: '#app',
+		components: {
+			'ipma-navbar': Navbar,
+			'ipma-footer': Footer,
+			'dw-tabs': Tabs,
+		},
+	})
+</script>
+
+</body>
+</html>

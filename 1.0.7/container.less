@@ -1,0 +1,28 @@
+@import "config.less";
+
+/**
+ * Контейнер исползуется чтобы отделить содержательную часть контента от краев устройства
+ */
+.container {
+  padding: 0 2rem;
+  @media @tabletAndDesktop {
+    padding: 0 4rem;
+  }
+}
+
+/**
+ *
+ */
+.container-fixed {
+  padding: 0 2rem;
+  @media @tabletAndDesktop {
+    width: 100%;
+    max-width: 80rem;
+    padding: 0 4rem;
+    margin: auto;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+}

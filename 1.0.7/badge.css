@@ -1,0 +1,16 @@
+.badge {
+  display: flex;
+}
+.badge-header {
+  flex: 0 0 auto;
+  padding: 0.5rem;
+}
+.badge-main {
+  flex: auto;
+  padding: 0.5rem;
+}
+.badge-aside {
+  flex: 0 0 auto;
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=badge.css.map */

@@ -1,0 +1,219 @@
+html {
+  font-family: HermesFB, sans-serif;
+  font-weight: normal;
+  --ipma-red: #E21F26;
+  background-color: #F4F4F4;
+  color: #333;
+}
+
+ul {
+  list-style-image: url('/1.0.6/showcase/ipma/images/bullet.svg');
+}
+
+a {
+  color: var(--ipma-red);
+}
+
+.ipma-navbar-nav {
+  margin: -1rem -.5rem;
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem .5rem;
+    display: inline-block;
+  }
+  text-align: right;
+}
+
+.ipma-timeline {
+  display: flex;
+  flex-flow: wrap;
+  margin: -.5rem;
+}
+
+.ipma-timeline-offset--left-2 {
+  margin-left: 100% / 8 * 2;
+}
+
+.ipma-timeline-offset--right-3 {
+  margin-right: 100% / 8 * 3;
+}
+
+.ipma-timeline-1 {
+  padding: .5rem;
+  flex: 0 0 100% / 8;
+}
+
+.ipma-timeline-2 {
+  padding: .5rem;
+  flex: 0 0 100% / 8 * 2;
+}
+
+.ipma-timeline-3 {
+  padding: .5rem;
+  flex: 0 0 100% / 8 * 3;
+}
+
+.ipma-timeline-8 {
+  padding: .5rem;
+  flex: 0 0 100%;
+}
+
+.ipma-navbar-logo {
+  height: 4rem;
+}
+
+.ipma-events-nav-wrapper {
+  padding: 1rem 0;
+  background-color: var(--ipma-red);
+  a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 2rem;
+  }
+}
+
+.hero-wrapper {
+  background-image: url('/1.0.6/showcase/ipma/images/image-background-hero.jpg');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.ipma-red-box {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--ipma-red);
+  main {
+    flex: auto;
+    padding: 1rem;
+    padding-top: 12rem;
+  }
+  footer {
+    flex: 0 0 auto;
+    padding: 1.5rem 1rem;
+    background-color: var(--ipma-red);
+    color: #fff;
+    font-size: 36px;
+  }
+}
+
+.ipma-footer {
+}
+
+.ipma-footer-dark {
+  background-color: #142031;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+}
+
+.ipma-horse {
+  background-image: url('/1.0.6/showcase/ipma/images/horse.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.ipma-footer-logo {
+  height: 3rem;
+}
+
+.ipma-history {
+  background-image: url('/1.0.6/showcase/ipma/images/ruler.svg');
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.ipma-history-record {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  header {
+    width: 100%;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  footer {
+    width: 100%;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+.highlighter {
+  position: relative;
+  z-index: 10;
+}
+
+.highlighter:after {
+  position: absolute;
+  left: 0;
+  top: 33.3%;
+  width: 100%;
+  height: .75em;
+  content: '';
+  background-color: #F49102;
+  z-index: -1;
+}
+
+.ipma-red {
+  color: var(--ipma-red);
+}
+
+.ipma-h1 {
+  font-size: 64px;
+  line-height: 114%;
+  font-weight: normal;
+}
+
+.ipma-h2 {
+  font-size: 48px;
+  font-weight: normal;
+}
+
+.ipma-h3 {
+  font-size: 38px;
+  font-weight: normal;
+}
+
+.ipma-h4 {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 130%;
+}
+
+.ipma-heading-ru {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.ipma-caption {
+  font-size: 14px;
+}
+
+.ipma-small {
+  font-size: 12px;
+}
+
+.ipma-big {
+  font-size: 20px;
+}
+
+.ipma-button {
+  background-color: var(--ipma-red);
+  border-color: var(--ipma-red);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}

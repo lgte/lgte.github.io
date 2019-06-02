@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          user-scalable=no,
+          minimal-ui"
+    />
+    <meta name="description" content="IPMA">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Rus Inozemtsev">
+    <meta name="author" content="Dasha Evstegneeva">
+
+    <title>IPMA</title>
+    <link href="/1.0.6/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fonts/hermes-fb.css">
+
+    <link rel="stylesheet" href="/1.0.6/components/hero/index.css">
+    <link rel="stylesheet" href="/1.0.6/components/domino/index.css">
+</head>
+<body>
+<div id="app">
+    <!-- wrapper -->
+    <section class="background-dark hero-wrapper">
+        <div class="hero flex-column">
+            <div class="flex-item">
+                <div>
+                    <div class="container-fixed ipma-caption dim padding-10">
+                        International Project Management Association, IPMA
+                    </div>
+                </div>
+                <hr class="margin-0">
+                <div class="container-fixed padding-10">
+                    <ipma-navbar/>
+                </div>
+            </div>
+            <div class="container-fixed flex-item-auto flex-column flex-column--space-around">
+                <div>
+                    <h1 class="ipma-h1">
+                        32nd IPMA World Congress <br>
+                        <span class="ipma-red">in Russia, St. Petersburg</span>
+                    </h1>
+                    <h4 class="ipma-h4">Project Management in the Digital Transformation Era</h4>
+                    <h4 class="ipma-h4">September 22-24th, 2020</h4>
+                    <div class="space-big"></div>
+                    <button class="ipma-button">Register</button>
+                </div>
+            </div>
+            <div class="flex-item">
+                <div class="wrapper">
+                    <ipma-history/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fixed padding-10-bigger">
+        <h4 class="ipma-h4">News</h4>
+        <div class="grid">
+            <div class="cell-33">
+                <ipma-news-preview/>
+            </div>
+            <div class="cell-33">
+                <ipma-news-preview/>
+            </div>
+            <div class="cell-33">
+                <ipma-news-preview/>
+            </div>
+        </div>
+    </section>
+    <section class="container-fixed padding-10-bigger ipma-horse">
+        <div class="grid">
+            <div class="cell-50">
+                <h2 class="ipma-h2">
+                    Welcome to the <span class="ipma-red">central project management event.</span>
+                    Meet your colleagues from 70 countries
+                </h2>
+                <div class="grid">
+                    <div class="cell-50">
+                        <ul>
+                            <li class="ipma-h4">Professional project practitioners</li>
+                            <li class="ipma-h4">Consultants</li>
+                            <li class="ipma-h4">Academic professors</li>
+                        </ul>
+                    </div>
+                    <div class="cell-50">
+                        <ul>
+                            <li class="ipma-h4">Government officials</li>
+                            <li class="ipma-h4">NGO´s</li>
+                            <li class="ipma-h4">Students</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fixed padding-10-bigger">
+        <h4 class="ipma-h4">Events</h4>
+        <div class="grid">
+            <div class="cell-25">
+                <div class="ipma-red-box height-100">
+                    <main>
+                        <h3 class="ipma-h3">
+                            Young Crew
+                        </h3>
+                        <p>
+                            For young professionals under 35 and students in the management of projects
+                        </p>
+                    </main>
+                    <footer>
+                        09.21—22
+                    </footer>
+                </div>
+            </div>
+            <div class="cell-25">
+                <div class="ipma-red-box height-100">
+                    <main>
+                        <h3 class="ipma-h3">
+                            World Congress
+                        </h3>
+                    </main>
+                    <footer>
+                        09.22—24
+                    </footer>
+                </div>
+            </div>
+            <div class="cell-25">
+                <div class="ipma-red-box height-100">
+                    <main>
+                        <h3 class="ipma-h3">
+                            Awards Gala
+                        </h3>
+                        <div>
+                            We celebrate outstanding project management achievements
+                        </div>
+                    </main>
+                    <footer>
+                        09.23
+                    </footer>
+                </div>
+            </div>
+            <div class="cell-25">
+                <div class="ipma-red-box height-100">
+                    <main>
+                        <h3 class="ipma-h3">
+                            Council of Delegates
+                        </h3>
+                    </main>
+                    <footer>
+                        09.24
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="domino">
+            <div class="domino-cover">
+                <img src="https://r-cf.bstatic.com/images/hotel/max1024x768/130/130436885.jpg" alt="">
+            </div>
+            <div class="domino-text">
+                <div class="container">
+                    <div class="ipma-heading-ru">Добро пожаловать в Санкт-Петербург <span class="ipma-red">*</span></div>
+                    <h4 class="ipma-h4 red">
+                        – Welcome to St. Petersburg
+                    </h4>
+                    <h4 class="ipma-h4">
+                        The Historic Centre of Saint Petersburg and Related Groups of Monuments constitute a UNESCO
+                        World Heritage Site.
+                    </h4>
+                    <p>
+                        In St. Petersburg there are many <span class="highlighter">rivers and canals and 342
+                        bridges over Neva River.</span> The city is
+                        spread across more than 40 Islands. This has earned the city unsurprising comparisons to Venice,
+                        but the similarities don’t stop there: walking around the historic centre will reveal canals
+                        lined by Italianate mansions and broken up by striking squares adorned with baroque and
+                        neoclassical palaces. In the North of the city centre there are also pristine beaches fringing
+                        the Gulf of Finland.
+                    </p>
+                    <ul>
+                        <li class="ipma-h4">
+                            An important cultural and financial center in Russia and one of the most picturesque cities
+                            in the world
+                        </li>
+                        <li class="ipma-h4">
+                            In the North of the city centre there are also pristine beaches fringing the Gulf of
+                            Finland.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fixed padding-10-bigger">
+            <h3 class="ipma-h3">Thanks to all these people</h3>
+            <div class="grid">
+                <div class="cell-50">
+                    <h4 class="ipma-h4">Organizers</h4>
+                    <div class="grid">
+                        <div class="cell-20">
+                            <picture>
+                                <img
+                                        class="ipma-footer-logo"
+                                        src="/1.0.6/showcase/ipma/images/logo-organizer-ipma.svg"
+                                        alt=""
+                                >
+                            </picture>
+                        </div>
+                        <div class="cell-80">
+                            IPMA — International Professional Federation of National Project Management Associations.
+                            Learn
+                            more about IPMA
+                        </div>
+                        <div class="cell-20">
+                            <picture>
+                                <img
+                                        class="ipma-footer-logo"
+                                        src="/1.0.6/showcase/ipma/images/logo-sovnet.svg"
+                                        alt=""
+                                >
+                            </picture>
+                        </div>
+                        <div class="cell-80">
+                            In Russia, IPMA is represented by the national project management association SOVNET. Learn
+                            more
+                            about SOVNET
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-50">
+                    <h4 class="ipma-h4">Partners</h4>
+                    <div class="grid">
+                        <div class="cell-50">
+                            <img class="ipma-footer-logo" src="/1.0.6/showcase/ipma/images/logo-winbd.png" alt="">
+                        </div>
+                        <div class="cell-50">
+                            <img class="ipma-footer-logo" src="/1.0.6/showcase/ipma/images/logo-ac.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="wrapper">
+        <section>
+            <div class="padding-10-bigger">
+                <div class="container-fixed">
+                    <h4 class="ipma-h4">Videos and photos from previous Congresses</h4>
+                </div>
+                <div class="padding-0001-container">
+                    <div class="grid grid--scroll">
+                        <div class="cell-33">
+                            <div class="placeholder">
+                                <div class="figure-liquid">
+                                    <img src="/1.0.6/showcase/ipma/images/congress-previous-video.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-25">
+                            <div class="figure-1x1">
+                                <img src="/1.0.6/showcase/ipma/images/congress-previous-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cell-25">
+                            <div class="figure-1x1">
+                                <img src="/1.0.6/showcase/ipma/images/congress-previous-2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cell-25">
+                            <div class="figure-1x1">
+                                <img src="/1.0.6/showcase/ipma/images/congress-previous-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <ipma-footer/>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="module" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'HermesFB';
+    font-style: normal;
+    font-weight: 100;
+    src: url(./HermesFB-Thin.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'HermesFB';
+    font-style: normal;
+    font-weight: 300;
+    src: url(./HermesFB-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'HermesFB';
+    font-style: normal;
+    font-weight: 600;
+    src: url(./HermesFB-Bold.otf) format('opentype');
+}

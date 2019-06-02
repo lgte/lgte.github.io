@@ -1,0 +1,42 @@
+@import '../../config.less';
+
+.domino {
+  @media @tabletAndDesktop {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.domino-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 50%;
+}
+
+.domino-cover {
+
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 2rem;
+
+  @media @tabletAndDesktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 50%;
+    height: auto;
+  }
+
+  >* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

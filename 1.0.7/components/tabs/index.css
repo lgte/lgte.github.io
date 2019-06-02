@@ -1,0 +1,10 @@
+.tabs-tab {
+  display: none;
+}
+.tabs-nav a {
+  margin-right: 2rem;
+}
+.tabs-tab--active {
+  display: block;
+}
+/*# sourceMappingURL=index.css.map */

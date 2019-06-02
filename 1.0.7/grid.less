@@ -1,0 +1,72 @@
+@import "./config.less";
+
+.grid {
+  display: flex;
+  min-width: 100%;
+  flex-flow: wrap;
+  margin: -.5rem;
+  overflow: hidden;
+}
+
+.grid--scroll {
+  overflow-x: scroll;
+  flex-flow: nowrap;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.grid--scroll::-webkit-scrollbar { width: 0 !important }
+
+.grid--no-wrap {
+  flex-flow: nowrap;
+}
+
+.grid--centered {
+  align-items: center;
+}
+
+.grid--space-between {
+  justify-content: space-between;
+}
+
+.cell {
+  padding: .5rem;
+  flex: 0 0 auto;
+}
+
+.cell-auto {
+  padding: .5rem;
+  flex: auto;
+}
+
+each(@cellSizes, {
+  @name: floor(@value);
+  .cell-@{name} {
+    padding: .5rem;
+    flex: 0 0 @value + 0%;
+  }
+
+  @media @phone {
+    .cell-p-@{name} {
+      padding: .5rem;
+      flex: @value + 0%;
+      max-width: @value + 0%;
+    }
+  }
+
+  @media @tablet {
+    .cell-t-@{name} {
+      padding: .5rem;
+      flex: @value + 0% !important;
+      max-width: @value + 0% !important;
+    }
+  }
+
+  @media @desktop {
+    .cell-d-@{name} {
+      padding: .5rem;
+      flex: @value + 0% !important;
+      max-width: @value + 0% !important;
+    }
+  }
+})

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          user-scalable=no,
+          minimal-ui"
+    />
+    <meta name="description" content="IPMA">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Rus Inozemtsev">
+    <meta name="author" content="Dasha Evstegneeva">
+
+    <title>IPMA</title>
+    <link href="/1.0.6/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fonts/hermes-fb.css">
+
+    <link rel="stylesheet" href="/1.0.6/components/hero/index.css">
+    <link rel="stylesheet" href="/1.0.6/components/domino/index.css">
+    <link rel="stylesheet" href="/1.0.6/components/tabs/index.css">
+</head>
+<body>
+<div id="app">
+    <!-- wrapper -->
+    <section class="background-dark hero-wrapper">
+        <div class="hero hero--one-third flex-column">
+            <div class="flex-item">
+                <div>
+                    <div class="container-fixed ipma-caption dim padding-10">
+                        International Project Management Association, IPMA
+                    </div>
+                </div>
+                <hr class="margin-0">
+                <div class="container-fixed padding-10">
+                    <ipma-navbar/>
+                </div>
+            </div>
+            <div class="flex-item-auto"></div>
+            <div class="container-fixed flex-item padding-10-bigger">
+                <h1 class="ipma-h1">Venue</h1>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fixed padding-10-bigger">
+            <p>
+                Holiday Inn: St. Petersburg — Moskovskye V.
+            </p>
+            <p>
+                Moskovsky Prospekt 97a
+            </p>
+        </div>
+        <div class="container">
+            <div class="grid grid--scroll">
+                <div class="cell-33">
+                    <div class="placeholder">
+                        <div class="figure-liquid">
+                            <img src="/1.0.6/showcase/ipma/images/venue-photo-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cell-25">
+                    <div class="figure-1x1">
+                        <img src="/1.0.6/showcase/ipma/images/venue-photo-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fixed padding-10-bigger">
+            <dw-tabs active="first-flow">
+                <div class="tabs">
+                    <nav class="tabs-nav">
+                        <a href="first-flow">1st Floor</a>
+                        <a href="second-flow">2nd Floor</a>
+                        <a href="third-flow">3nd Floor</a>
+                    </nav>
+                    <main class="tabs-content">
+                        <div class="tabs-tab" data-tab="first-flow">
+                            <img src="/1.0.6/showcase/ipma/images/venue-plan-1.svg" alt="">
+                        </div>
+                        <div class="tabs-tab" data-tab="second-flow">
+                            <img src="/1.0.6/showcase/ipma/images/venue-plan-2.svg" alt="">
+                        </div>
+                        <div class="tabs-tab" data-tab="third-flow">
+                            <img src="/1.0.6/showcase/ipma/images/venue-plan-3.svg" alt="">
+                        </div>
+                    </main>
+                </div>
+            </dw-tabs>
+        </div>
+    </section>
+    <section>
+        <div class="padding-10-bigger">
+            <iframe width="100%" height="640px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D1%81%D0%B0%D0%BD%D0%BA%D1%82%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D1%83%D1%80%D0%B3%20Moskovsky%20Prospekt%2097a&key=AIzaSyDiOj_sxrXTGToS07qpRWMZT6ndY5iwvzA" allowfullscreen></iframe>
+        </div>
+    </section>
+    <ipma-footer/>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script type="module">
+    //AIzaSyDiOj_sxrXTGToS07qpRWMZT6ndY5iwvzA
+	import { Footer } from './components/Footer.js'
+	import { Navbar } from './components/Navbar.js'
+	import { Tabs } from '/1.0.6/components/tabs/index.js'
+
+	const app = new Vue({
+		el: '#app',
+		components: {
+			'ipma-navbar': Navbar,
+			'ipma-footer': Footer,
+			'dw-tabs': Tabs,
+		},
+	})
+</script>
+
+</body>
+</html>

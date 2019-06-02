@@ -5,9 +5,225 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/1.0.7/index.css?2">
+    <title>LGTE API</title>
 </head>
 <body>
-lgte.github.io
+<div class="container-fixed">
+    <div class="section">
+        <div class="heading-site">LGTE API</div>
+    </div>
+    <div class="section">
+        <h1>Status codes</h1>
+        <ul>
+            <li>200 OK Successful request</li>
+            <li>400 Bad Request. Returns JSON with the error message</li>
+            <li>401 Unauthorized. Authorisation required or failed</li>
+            <li>403 Forbidden. Action is forbidden for API key</li>
+            <li>429 Too Many Requests. Your connection is being rate limited</li>
+            <li>500 Internal Server. Internal Server Error</li>
+            <li>503 Service Unavailable. Service is down for maintenance</li>
+            <li>504 Gateway Timeout. Request timeout expired</li>
+        </ul>
+        <h1>Protocols</h1>
+        <il>
+            <li>REST over HTTPS</li>
+            <li>WSS</li>
+        </il>
+        <h1>Examples</h1>
+        <code>Content-type: application/json</code>
+        <h2>Request</h2>
+        <code>
+{
+    email: 'user@lgte.io',
+    password: '...'
+}
+        </code>
+
+        <h2>Response</h2>
+        <code>
+{
+    summary: {
+        code: 200
+    }
+},
+data: {
+    token: '1iuy23tk4cvgkajrxq82376q483745q23c
+}
+        </code>
+
+        <h1>Methods</h1>
+
+        <h2>/users/authenticate</h2>
+        <p>Метод авторизцует сесссию и создает соответствующий токен</p>
+        <h3>Request</h3>
+        <code>
+            {email: 'email@example.com', password: '...'}
+        </code>
+        <h3>Response</h3>
+        <code>
+            {summary: {code: 200}, token: 'zcxvasd098t24rk3jhfd'}
+        </code>
+
+        <h2>/tokens</h2>
+        <p>Список всех токенов в системе</p>
+        <h3>Request</h3>
+        <code>
+            {
+                token: '...'
+            }
+        </code>
+
+        <h3>Response</h3>
+        <code>
+            [
+                {_id: 'btc', title: 'Bitcoin', symbol: 'BTC'}
+            ]
+        </code>
+
+        <h2>/pairs</h2>
+        <p>Список пар в системе</p>
+        <h3>Request</h3>
+        <code>
+            {
+                token: '...'
+            }
+        </code>
+
+        <h3>Response</h3>
+        <code>
+            [
+                {_id: 'btceth', _tokenBase: 'btc', _tokenQuoted: 'eth'}
+            ]
+        </code>
+
+        <h2>/prices</h2>
+        <h3>Request</h3>
+        <code>
+            {token: '...', _pair: ['btceth']}
+        </code>
+
+        <h3>Response</h3>
+        <code>
+            [
+                {_pair: 'btceth', createdAt: {dateTime}, price: {price}}
+            ]
+        </code>
+
+        <h2>/orders</h2>
+        <p>Возвращает список ордеров авторизованого юзера</p>
+        <h3>Request</h3>
+        <code>{token: '...'}</code>
+
+        <h3>Response</h3>
+        <code>
+            [
+                {
+                    _id: 'ajkwdgrkq23452',
+                    _pair: 'btceth',
+                    direction: 'sell',
+                    type: 'market',
+                    amount: 100,
+                    amountLeft: 80,
+                    flags: {
+                        filled: false,
+                        cancelled: false,
+                    }
+                }
+
+            ]
+        </code>
+
+        <h2>/orders/insert</h2>
+        <p>Установка нового ордера</p>
+
+        <h3>Request</h3>
+        <code>
+            {
+                _id: 'ajkwdgrkq23452',
+                _pair: 'btceth',
+                token: '...',
+                direction: 'sell',
+                type: 'market',
+                amount: 100,
+            }
+        </code>
+
+        <h3>Response</h3>
+        <code>
+            {
+                summary: {code: 200},
+                data: {
+                    _order: 'asdhjkfgasdfs32412435'
+                }
+            }
+        </code>
+
+        <h2>/orders/cancel</h2>
+        <p>Отмена ордера</p>
+        <h3>Request</h3>
+        <code>
+            {
+                _order: 'asdhjkfgasdfs32412435',
+                token: '...',
+            }
+        </code>
+
+        <h3>Response</h3>
+        <code>
+            {
+                summary: {code: 200},
+                data: {
+                    _order: 'asdhjkfgasdfs32412435'
+                }
+            }
+        </code>
+
+        <h2>/accounts</h2>
+        <p>Все аккаунты текущего пользователя</p>
+        <h3>Request</h3>
+        <code>
+            {
+                token: '...'
+            }
+        </code>
+
+        <h3>Response</h3>
+        <code>
+            [
+            {_id: '...', _token: 'btc', balance: 0}
+            ]
+        </code>
+
+
+        <h2>/transactions</h2>
+        <p>список траназакицй по аккаунту пользователя</p>
+        <h3>Request</h3>
+        <code>
+            {_account: '...', token: '...'}
+        </code>
+        <h3>Response</h3>
+        <code>
+            {
+                summary: {code: 200}
+            }
+        </code>
+
+        <h2>/transactions/insert</h2>
+        <p>Отправка транзакции</p>
+        <h3>Request</h3>
+        <code>
+            {_accountCredit: '...', _accountDebit: '...', amount: 100, comment: '', token: '...'}
+        </code>
+        <h3>Response</h3>
+        <code>
+            {
+            summary: {code: 200}
+            }
+        </code>
+    </div>
+</div>
+<script src="microlight.js"></script>
 </body>
 </html>

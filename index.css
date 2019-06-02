@@ -1,0 +1,9 @@
+body {
+    background-color: #141321;
+    color: rgba(255, 255, 255, .75)
+}
+
+.microlight {
+    font-family : monospace;
+    white-space : pre;
+}
